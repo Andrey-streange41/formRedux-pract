@@ -12,9 +12,10 @@ export const RegisterForm = (props) => {
     const send = sendData({ password: password, login: login });
     props.dispatch(send);
     setValidation(true);
+    console.log(props.user)
   };
 
-  return !validation ? (
+  return ! validation ? (
     <form onSubmit={handleSubmit}>
       <input
         value={login}
@@ -34,8 +35,8 @@ export const RegisterForm = (props) => {
     </form>
   ) : (
     <div>
-      {login}
-      <div>{password}</div>
+      {props.user.login}
+      <div>{props.user.password}</div>
     </div>
   );
 };

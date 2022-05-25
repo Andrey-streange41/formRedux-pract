@@ -21,5 +21,5 @@ export const decrementAction =  (payload) => {
 }
 
 export const sendData = (payload)=>{
-   return{type: actionTypes.SEND_DATA, payload}
+   return{ type: actionTypes.SEND_DATA, payload }
 }
