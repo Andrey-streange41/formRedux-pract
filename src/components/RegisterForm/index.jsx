@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import {sendData} from '../../actions/actionCreator.js'
 
 export const RegisterForm = (props) => {
   const [password, setPassword] = useState();
@@ -8,7 +9,8 @@ export const RegisterForm = (props) => {
 
   const handleSubmit = (e) => {
         e.preventDefault();
-        props.user.userState = {login:login, password:password}
+        const send = sendData(password, login);
+        props.dispatch(send);
         setValidation(true);
   };
 
@@ -25,6 +27,5 @@ const mapStateToProps = (state) => ({
     user : state.userData
 });
 
-const mapDispatchToProps = {};
 
-export default connect(mapStateToProps, mapDispatchToProps)(RegisterForm);
+export default connect(mapStateToProps)(RegisterForm);

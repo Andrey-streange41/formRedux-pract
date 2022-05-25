@@ -19,3 +19,7 @@ export const decrementAction =  (payload) => {
  export const removeTask = (payload) => {
    return { type: actionTypes.REMOVE_TASK , payload};
 }
+
+export const sendData = (payload)=>{
+   return{type: actionTypes.SEND_DATA,payload}
+}

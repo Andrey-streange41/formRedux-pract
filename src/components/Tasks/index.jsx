@@ -13,7 +13,6 @@ export const Tasks = (props) => {
             id: Math.random(),
             number: props.taskState.list.length,
           });
-          console.log(props.taskState.list)
           props.dispatch(add);
         }}
       >

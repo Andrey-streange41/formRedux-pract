@@ -3,6 +3,7 @@ const actionTypes ={
     DECREMENT:'decrement',
     RESET:'reset',
     ADDTASK:'addTask',
-    REMOVE_TASK:'removeTask'
+    REMOVE_TASK:'removeTask',
+    SEND_DATA:'sendData'
 }
 export default actionTypes;
